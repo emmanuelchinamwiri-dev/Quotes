@@ -1,0 +1,34 @@
+{
+  "name": "manzy-wrld-app",
+  "version": "1.0.0",
+  "description": "MANZY WRLD - Daily Inspirational Quotes Progressive Web App",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve . -s -l 3000",
+    "dev": "serve . -s -l 3000 -o",
+    "build": "echo 'No build process needed for static PWA'",
+    "deploy": "echo 'Deploy to GitHub Pages or Netlify'"
+  },
+  "keywords": [
+    "quotes",
+    "inspiration",
+    "motivation",
+    "pwa",
+    "progressive-web-app",
+    "mobile",
+    "offline"
+  ],
+  "author": "Emmanuel Chinamwiri",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^14.2.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/manzy-wrld/manzy-wrld-app.git"
+  },
+  "homepage": "https://manzy-wrld.github.io/manzy-wrld-app",
+  "bugs": {
+    "url": "https://github.com/manzy-wrld/manzy-wrld-app/issues"
+  }
+}
