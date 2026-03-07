@@ -1,0 +1,3173 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Inspiration Quotes</title>
+  <meta name="description" content="Daily motivational quotes by category — MANZY WRLD" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    :root{
+      --bg-1:#0f0f23; --bg-2:#1a1a3e; --bg-3:#16213e; --accent:#ff006e;
+      --card-bg: rgba(138, 43, 226, 0.1); --card-hover: rgba(138, 43, 226, 0.2);
+      --text-primary: #ffffff; --text-secondary: #e0e0ff; --text-muted: #9ca3af;
+      --glass: rgba(255, 255, 255, 0.08); --glass-2: rgba(255, 255, 255, 0.04);
+      --radius:20px; --shadow: 0 10px 30px rgba(138, 43, 226, 0.3);
+      --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+      --gradient-2: linear-gradient(135deg, #ff006e 0%, #8338ec 50%, #3a86ff 100%);
+      --gradient-3: linear-gradient(135deg, #00f5ff 0%, #00b4d8 50%, #0066ff 100%);
+      --gradient-4: linear-gradient(135deg, #00ff88 0%, #00d4ff 50%, #0099ff 100%);
+      --gradient-5: linear-gradient(135deg, #ff6b6b 0%, #feca57 50%, #48dbfb 100%);
+      --gradient-6: linear-gradient(135deg, #f093fb 0%, #f5576c 50%, #ff006e 100%);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      background: linear-gradient(135deg, var(--bg-1) 0%, var(--bg-2) 50%, var(--bg-3) 100%);
+      background-attachment: fixed;
+      color:var(--text-primary);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.6;
+      min-height:100vh;
+      position:relative;
+    }
+    
+    body::before{
+      content:'';
+      position:fixed;
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
+      background: 
+        radial-gradient(circle at 20% 50%, rgba(255, 0, 110, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(131, 56, 236, 0.12) 0%, transparent 50%),
+        radial-gradient(circle at 40% 20%, rgba(58, 134, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 60% 70%, rgba(0, 245, 255, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 85% 30%, rgba(0, 255, 136, 0.06) 0%, transparent 50%);
+      pointer-events:none;
+      z-index:1;
+      animation: floatBg 25s ease-in-out infinite;
+    }
+    
+    @keyframes floatBg{
+      0%,100%{transform:translateY(0px) rotate(0deg)}
+      33%{transform:translateY(-20px) rotate(1deg)}
+      66%{transform:translateY(10px) rotate(-1deg)}
+    }
+    .wrap{
+      max-width:1200px;
+      margin:0 auto;
+      padding:20px;
+      position:relative;
+      z-index:2;
+      animation: fadeInUp 1s ease-out;
+    }
+    
+    @keyframes fadeInUp{
+      from{
+        opacity:0;
+        transform:translateY(30px);
+      }
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:20px 0;
+      margin-bottom:30px;
+      flex-wrap:wrap;
+      gap:20px;
+    }
+    
+    .brand{
+      font-weight:900;
+      font-size:clamp(1.5rem, 4vw, 2.5rem);
+      letter-spacing:0.1em;
+      background:var(--gradient-2);
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+      text-shadow:0 0 30px rgba(255, 0, 110, 0.4);
+      animation: glow 3s ease-in-out infinite;
+    }
+    
+    @keyframes glow{
+      0%,100%{filter:brightness(1)}
+      50%{filter:brightness(1.2)}
+    }
+
+    .hero{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:30px;
+      margin-top:20px;
+    }
+    
+    @media (min-width:768px){
+      .hero{
+        grid-template-columns:1fr 380px;
+      }
+    }
+    
+    .panel{
+      background:var(--glass);
+      backdrop-filter:blur(20px);
+      border:1px solid rgba(255,255,255,0.1);
+      border-radius:var(--radius);
+      padding:30px;
+      box-shadow:var(--shadow);
+      transition:all 0.3s ease;
+      position:relative;
+      overflow:hidden;
+    }
+    
+    .panel::before{
+      content:'';
+      position:absolute;
+      top:0;
+      left:0;
+      right:0;
+      height:2px;
+      background:var(--gradient-2);
+      animation: shimmer 3s ease-in-out infinite;
+    }
+    
+    @keyframes shimmer{
+      0%{transform:translateX(-100%)}
+      100%{transform:translateX(100%)}
+    }
+    
+    .panel:hover{
+      transform:translateY(-5px);
+      box-shadow:0 20px 40px rgba(0,0,0,0.4);
+      border-color:rgba(255,255,255,0.2);
+    }
+
+    .quote-large{
+      font-size:clamp(1.3rem, 3vw, 1.8rem);
+      font-weight:700;
+      margin:0 0 15px;
+      display:flex;
+      align-items:flex-start;
+      line-height:1.4;
+      color:var(--text-primary);
+    }
+    
+    .quote-author{
+      color:var(--text-secondary);
+      font-weight:500;
+      margin:0 0 20px;
+      font-size:clamp(0.9rem, 2vw, 1rem);
+    }
+    /* category pills removed — right-side selector used instead */
+
+    .grid{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:20px;
+      margin-top:25px;
+    }
+    
+    @media (min-width:640px){
+      .grid{
+        grid-template-columns:repeat(2,1fr);
+      }
+    }
+    
+    @media (min-width:1024px){
+      .grid{
+        grid-template-columns:repeat(2,1fr);
+      }
+    }
+    
+    .card{
+      background:var(--card-bg);
+      backdrop-filter:blur(10px);
+      border:1px solid rgba(255,255,255,0.1);
+      border-radius:20px;
+      padding:30px;
+      min-height:180px;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      transition:all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      position:relative;
+      overflow:hidden;
+      cursor:pointer;
+    }
+    
+    .card::before{
+      content:'';
+      position:absolute;
+      top:0;
+      left:0;
+      right:0;
+      bottom:0;
+      background:var(--gradient-1);
+      opacity:0;
+      transition:opacity 0.4s ease;
+      border-radius:20px;
+    }
+    
+    .card::after{
+      content:'';
+      position:absolute;
+      top:-50%;
+      left:-50%;
+      width:200%;
+      height:200%;
+      background:radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+      opacity:0;
+      transition:opacity 0.4s ease;
+      pointer-events:none;
+    }
+    
+    .card:hover{
+      transform:translateY(-12px) scale(1.03) rotateX(5deg);
+      box-shadow:0 25px 50px rgba(0,0,0,0.5);
+      border-color:rgba(255,255,255,0.3);
+    }
+    
+    .card:hover::before{
+      opacity:0.15;
+    }
+    
+    .card:hover::after{
+      opacity:1;
+    }
+    
+    .card > *{
+      position:relative;
+      z-index:1;
+    }
+    
+    .card-header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      margin-bottom:15px;
+    }
+    
+    .card-category-icon{
+      width:40px;
+      height:40px;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:1.2rem;
+      margin-right:12px;
+    }
+    
+    .card h3{
+      margin:0;
+      font-size:clamp(1.2rem, 2.5vw, 1.4rem);
+      font-weight:800;
+      color:rgba(255,255,255,0.95);
+      text-transform:capitalize;
+      letter-spacing:0.5px;
+    }
+    
+    .card-quote-count{
+      font-size:0.8rem;
+      color:rgba(255,255,255,0.6);
+      background:rgba(255,255,255,0.1);
+      padding:4px 8px;
+      border-radius:12px;
+    }
+    
+    .card p{
+      margin:0;
+      color:rgba(255,255,255,0.9);
+      font-style:italic;
+      font-size:clamp(0.95rem, 2vw, 1.05rem);
+      line-height:1.6;
+      position:relative;
+      padding-left:20px;
+    }
+    
+    .card p::before{
+      content:'"';
+      position:absolute;
+      left:0;
+      top:0;
+      font-size:2rem;
+      color:rgba(255,255,255,0.3);
+      line-height:1;
+    }
+    
+    .card-footer{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      margin-top:20px;
+      padding-top:15px;
+      border-top:1px solid rgba(255,255,255,0.1);
+    }
+    
+    .card-action-btn{
+      padding:8px 16px;
+      background:rgba(255,255,255,0.1);
+      border:1px solid rgba(255,255,255,0.2);
+      border-radius:20px;
+      color:rgba(255,255,255,0.9);
+      font-size:0.8rem;
+      font-weight:600;
+      cursor:pointer;
+      transition:all 0.3s ease;
+      text-decoration:none;
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+    }
+    
+    .card-action-btn:hover{
+      background:rgba(255,255,255,0.2);
+      transform:translateY(-2px);
+      box-shadow:0 4px 12px rgba(0,0,0,0.2);
+    }
+    
+    /* Social Sharing Styles */
+    .share-dropdown{
+      position: relative;
+      display: inline-block;
+    }
+    
+    .share-button{
+      padding: 12px 20px;
+      background: linear-gradient(135deg, #06b6d4, #0891b2);
+      color: white;
+      border: none;
+      border-radius: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 8px 25px rgba(6, 182, 212, 0.4);
+    }
+    
+    .share-button:hover{
+      transform: translateY(-3px);
+      box-shadow: 0 12px 35px rgba(6, 182, 212, 0.5);
+    }
+    
+    .share-menu{
+      position: absolute;
+      top: 100%;
+      right: 0;
+      margin-top: 8px;
+      background: rgba(30, 41, 59, 0.95);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      min-width: 180px;
+      z-index: 1000;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-10px);
+      transition: all 0.3s ease;
+    }
+    
+    .share-menu.active{
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+    
+    .share-option{
+      width: 100%;
+      padding: 12px 16px;
+      background: transparent;
+      border: none;
+      color: rgba(255, 255, 255, 0.9);
+      text-align: left;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+    
+    .share-option:hover{
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+    }
+    
+    .share-option:first-child{
+      border-radius: 12px 12px 0 0;
+    }
+    
+    .share-option:last-child{
+      border-radius: 0 0 12px 12px;
+    }
+    
+    .share-option i{
+      width: 20px;
+      text-align: center;
+      font-size: 1.1rem;
+    }
+    
+    .share-option:hover i{
+      transform: scale(1.1);
+    }
+    
+    @media (max-width:640px){
+      .share-menu{
+        right: auto;
+        left: 0;
+        min-width: 200px;
+      }
+    }
+
+    /* Category-specific card icons */
+    .cat-sad .card-category-icon{ background:linear-gradient(135deg, #6366f1, #4f46e5); }
+    .cat-happy .card-category-icon{ background:linear-gradient(135deg, #f59e0b, #d97706); }
+    .cat-overwhelmed .card-category-icon{ background:linear-gradient(135deg, #8b5cf6, #7c3aed); }
+    .cat-motivational .card-category-icon{ background:linear-gradient(135deg, #10b981, #059669); }
+    .cat-birthday .card-category-icon{ background:linear-gradient(135deg, #ec4899, #be185d); }
+    .cat-inspirational .card-category-icon{ background:linear-gradient(135deg, #3b82f6, #1d4ed8); }
+    .cat-grateful .card-category-icon{ background:linear-gradient(135deg, #22c55e, #16a34a); }
+    .cat-peaceful .card-category-icon{ background:linear-gradient(135deg, #06b6d4, #0284c7); }
+    .spin, .show-all, .big-button{
+      align-self:start;
+      margin-top:15px;
+      padding:12px 20px;
+      border-radius:12px;
+      border:0;
+      font-weight:700;
+      cursor:pointer;
+      transition:all 0.3s ease;
+      font-size:clamp(0.85rem, 2vw, 0.95rem);
+      position:relative;
+      overflow:hidden;
+      text-decoration:none;
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+    }
+    
+    .spin{
+      background:var(--gradient-3);
+      color:white;
+      box-shadow:0 8px 25px rgba(0, 180, 255, 0.4);
+    }
+    
+    .spin:hover{
+      transform:translateY(-3px);
+      box-shadow:0 12px 35px rgba(0, 180, 255, 0.5);
+    }
+    
+    .show-all{
+      background:var(--gradient-4);
+      color:white;
+      box-shadow:0 8px 25px rgba(0, 212, 255, 0.4);
+    }
+    
+    .show-all:hover{
+      transform:translateY(-3px);
+      box-shadow:0 12px 35px rgba(0, 212, 255, 0.5);
+    }
+    
+    .big-button{
+      background:var(--gradient-5);
+      color:white;
+      box-shadow:0 8px 25px rgba(255, 107, 107, 0.4);
+    }
+    
+    .big-button:hover{
+      transform:translateY(-3px);
+      box-shadow:0 12px 35px rgba(255, 107, 107, 0.5);
+    }
+    
+    .spin:active, .show-all:active, .big-button:active{
+      transform:translateY(-1px) scale(0.98);
+    }
+
+    footer{
+      margin-top:50px;
+      padding:40px 20px;
+      background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+      color: #ffffff;
+      box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+      backdrop-filter:blur(20px);
+      border:1px solid rgba(255,255,255,0.1);
+      border-radius:var(--radius);
+    }
+    
+    .footer-container{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:20px;
+      padding:20px;
+      text-align:center;
+    }
+    
+    .footer-quote{
+      font-weight:700;
+      color: #ffffff;
+      text-align:center;
+      max-width:800px;
+      font-size:clamp(1rem, 2.5vw, 1.2rem);
+      line-height:1.5;
+      margin-bottom:20px;
+    }
+    
+    .footer-row{
+      display:flex;
+      gap:20px;
+      align-items:center;
+      justify-content:center;
+      flex-wrap:wrap;
+    }
+    
+    .footer-sep{
+      width:100%;
+      max-width:300px;
+      height:1px;
+      background:linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      border-radius:1px;
+      margin:20px 0;
+    }
+    .social{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      width:50px;
+      height:50px;
+      border-radius:50%;
+      background:var(--card-bg);
+      color:var(--text-secondary);
+      text-decoration:none;
+      transition:all 0.3s ease;
+      border:1px solid rgba(255,255,255,0.1);
+      backdrop-filter:blur(10px);
+    }
+    
+    .social i{
+      pointer-events:none;
+      font-size:1.2rem;
+    }
+    
+    .social:hover{
+      background:var(--gradient-2);
+      color:white;
+      transform:scale(1.1) translateY(-3px);
+      box-shadow:0 10px 25px rgba(255, 0, 110, 0.4);
+      border-color:transparent;
+    }
+    
+    .social:active{
+      transform:scale(0.95);
+    }
+    .footer-meta{
+      color: rgba(255, 255, 255, 0.7);
+      font-size:0.85rem;
+      margin-top:20px;
+    }
+    
+    .footer-links{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      justify-content:center;
+      margin-bottom:20px;
+    }
+    
+    .footer-links a{
+      color: rgba(255, 255, 255, 0.9);
+      text-decoration:none;
+      padding:8px 16px;
+      border:1px solid rgba(255,255,255,0.2);
+      border-radius:20px;
+      font-size:0.9rem;
+      transition:all 0.3s ease;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter:blur(10px);
+    }
+    
+    .footer-links a:hover{
+      background: rgba(255, 255, 255, 0.2);
+      color: #ffffff;
+      border-color:rgba(255,255,255,0.3);
+      transform:translateY(-2px);
+    }
+    
+    .footer-legal{
+      margin-top:20px;
+      display:flex;
+      gap:14px;
+      align-items:center;
+      justify-content:center;
+      flex-wrap:wrap;
+    }
+    
+    .footer-legal a{
+      font-weight:700;
+      text-decoration:none;
+      padding:8px 12px;
+      border-radius:8px;
+      transition:all 0.3s ease;
+    }
+    
+    .link-terms{
+      color:#f093fb;
+    }
+    
+    .link-terms:hover{
+      color:#f5576c;
+      filter:brightness(1.2);
+    }
+    
+    .link-cookies{
+      color:#4facfe;
+    }
+    
+    .link-cookies:hover{
+      color:#00f2fe;
+      filter:brightness(1.2);
+    }
+
+    /* colors for categories - Cool & Vibrant */
+    .cat-sad{background:#6366f1;color:#ffffff;box-shadow:0 4px 12px rgba(99, 102, 241, 0.3)}
+    .cat-happy{background:#f59e0b;color:#ffffff;box-shadow:0 4px 12px rgba(245, 158, 11, 0.3)}
+    .cat-overwhelmed{background:#8b5cf6;color:#ffffff;box-shadow:0 4px 12px rgba(139, 92, 246, 0.3)}
+    .cat-motivational{background:#10b981;color:#ffffff;box-shadow:0 4px 12px rgba(16, 185, 129, 0.3)}
+    .cat-birthday{background:#ec4899;color:#ffffff;box-shadow:0 4px 12px rgba(236, 72, 153, 0.3)}
+    .cat-inspirational{background:#3b82f6;color:#ffffff;box-shadow:0 4px 12px rgba(59, 130, 246, 0.3)}
+    .cat-grateful{background:#22c55e;color:#ffffff;box-shadow:0 4px 12px rgba(34, 197, 94, 0.3)}
+    .cat-peaceful{background:#06b6d4;color:#ffffff;box-shadow:0 4px 12px rgba(6, 182, 212, 0.3)}
+
+    /* make card text pop on colored backgrounds */
+    .card h3{color:rgba(255,255,255,0.95)}
+    .card p{color:rgba(255,255,255,0.9)}
+
+    /* footer-style background */
+    body{
+      background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+      min-height: 100vh;
+    }
+
+    /* Toast Notification */
+    .toast{
+      position:fixed;
+      bottom:20px;
+      right:20px;
+      background:var(--gradient-2);
+      color:white;
+      padding:15px 20px;
+      border-radius:12px;
+      box-shadow:0 10px 30px rgba(255, 0, 110, 0.4);
+      z-index:10001;
+      display:flex;
+      align-items:center;
+      gap:10px;
+      animation:slideInRight 0.3s ease;
+      font-weight:600;
+      font-size:0.95rem;
+    }
+    
+    @keyframes slideInRight{
+      from{
+        transform:translateX(100%);
+        opacity:0;
+      }
+      to{
+        transform:translateX(0);
+        opacity:1;
+      }
+    }
+    
+    .toast.show{
+      animation:slideOutRight 0.3s ease 0.3s forwards;
+    }
+    
+    @keyframes slideOutRight{
+      from{
+        transform:translateX(0);
+        opacity:1;
+      }
+      to{
+        transform:translateX(100%);
+        opacity:0;
+      }
+    }
+    
+    /* Section Headers */
+    .section-header{
+      margin-bottom: 25px;
+      text-align: center;
+    }
+    
+    .section-header h2{
+      margin: 0 0 10px 0;
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      text-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    }
+    
+    .section-header p{
+      margin: 0;
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+    
+    /* Search Hero Section */
+    .search-hero{
+      background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(29, 78, 216, 0.05) 100%);
+      border: 2px solid rgba(59, 130, 246, 0.3);
+      margin-bottom: 30px;
+    }
+    
+    .search-hero-header{
+      text-align: center;
+      margin-bottom: 25px;
+    }
+    
+    .search-hero-header h2{
+      color: #3b82f6;
+      margin: 0 0 10px 0;
+      font-size: 2rem;
+      text-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+    }
+    
+    /* Mood Grid */
+    .mood-grid{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+    
+    .mood-btn{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      padding: 20px 15px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 2px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      color: white;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    
+    .mood-btn:hover{
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.3);
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+    
+    .mood-icon{
+      font-size: 2rem;
+      display: block;
+    }
+    
+    .mood-label{
+      font-size: 0.9rem;
+      text-align: center;
+    }
+    
+    /* Stats Actions */
+    .stats-actions{
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      margin: 20px 0;
+      flex-wrap: wrap;
+    }
+    
+    .stats-btn{
+      padding: 10px 16px;
+      background: linear-gradient(135deg, #10b981, #059669);
+      color: white;
+      border: none;
+      border-radius: 20px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+    }
+    
+    .stats-btn:hover{
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+    }
+    
+    /* History Section */
+    .history-section h4{
+      margin: 0 0 15px 0;
+      color: var(--text-primary);
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+    
+    /* Quick Actions */
+    .quick-actions{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 12px;
+    }
+    
+    .quick-action-btn{
+      padding: 12px 16px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      color: rgba(255, 255, 255, 0.9);
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.9rem;
+    }
+    
+    .quick-action-btn:hover{
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+      transform: translateY(-2px);
+    }
+    
+    @media (max-width:640px){
+      .mood-grid{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+      }
+      
+      .mood-btn{
+        padding: 15px 10px;
+      }
+      
+      .mood-icon{
+        font-size: 1.5rem;
+      }
+      
+      .mood-label{
+        font-size: 0.8rem;
+      }
+      
+      .stats-actions{
+        flex-direction: column;
+      }
+      
+      .stats-btn{
+        width: 100%;
+        justify-content: center;
+      }
+      
+      .quick-actions{
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Stats Container Styles */
+    .stats-container{
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+    
+    .stat-item{
+      flex: 1;
+      text-align: center;
+      padding: 10px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .stat-number{
+      display: block;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #3b82f6;
+      margin-bottom: 2px;
+    }
+    
+    .stat-label{
+      display: block;
+      font-size: 0.7rem;
+      color: rgba(255, 255, 255, 0.7);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    @media (max-width:640px){
+      .stats-container{
+        flex-direction: column;
+        gap: 8px;
+      }
+      
+      .stat-item{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px 12px;
+      }
+      
+      .stat-number{
+        font-size: 1rem;
+      }
+      
+      .stat-label{
+        font-size: 0.8rem;
+      }
+    }
+
+    /* Search Section Styles */
+    .search-section{
+      margin-bottom: 25px;
+    }
+    
+    .search-container{
+      display: flex;
+      gap: 8px;
+      margin-bottom: 15px;
+    }
+    
+    .search-input{
+      flex: 1;
+      padding: 12px 16px;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      border-radius: 25px;
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+      font-size: 0.9rem;
+      outline: none;
+      transition: all 0.3s ease;
+    }
+    
+    .search-input::placeholder{
+      color: rgba(255, 255, 255, 0.6);
+    }
+    
+    .search-input:focus{
+      border-color: rgba(59, 130, 246, 0.5);
+      background: rgba(255, 255, 255, 0.15);
+      box-shadow: 0 0 20px rgba(59, 130, 246, 0.2);
+    }
+    
+    .search-btn{
+      padding: 12px 16px;
+      background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+      color: white;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+    }
+    
+    .search-btn:hover{
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+    }
+    
+    .search-filters{
+      display: flex;
+      gap: 8px;
+      margin-bottom: 15px;
+      flex-wrap: wrap;
+    }
+    
+    .filter-btn{
+      padding: 6px 12px;
+      background: rgba(255, 255, 255, 0.1);
+      color: rgba(255, 255, 255, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 15px;
+      font-size: 0.8rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .filter-btn:hover{
+      background: rgba(255, 255, 255, 0.2);
+      color: white;
+    }
+    
+    .filter-btn.active{
+      background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+      color: white;
+      border-color: transparent;
+    }
+    
+    .search-results{
+      max-height: 300px;
+      overflow-y: auto;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      padding: 10px;
+    }
+    
+    .search-result-item{
+      padding: 10px;
+      margin-bottom: 8px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border-left: 3px solid transparent;
+    }
+    
+    .search-result-item:hover{
+      background: rgba(255, 255, 255, 0.15);
+      border-left-color: #3b82f6;
+      transform: translateX(3px);
+    }
+    
+    .search-result-text{
+      color: white;
+      font-size: 0.9rem;
+      line-height: 1.4;
+      margin-bottom: 5px;
+    }
+    
+    .search-result-author{
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.8rem;
+      font-style: italic;
+    }
+    
+    .search-result-category{
+      display: inline-block;
+      padding: 2px 8px;
+      background: rgba(59, 130, 246, 0.2);
+      color: #3b82f6;
+      border-radius: 10px;
+      font-size: 0.7rem;
+      margin-top: 5px;
+    }
+    
+    @media (max-width:640px){
+      .search-filters{
+        justify-content: center;
+      }
+      
+      .filter-btn{
+        flex: 1;
+        text-align: center;
+        min-width: 60px;
+      }
+    }
+
+    /* Quote of the Day Styles */
+    .quote-of-day{
+      background: linear-gradient(135deg, rgba(251, 191, 36, 0.1) 0%, rgba(245, 158, 11, 0.05) 100%);
+      border: 2px solid rgba(251, 191, 36, 0.3);
+      margin-bottom: 30px;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .quote-of-day::before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #fbbf24, #f59e0b, #fbbf24);
+      animation: shimmer 3s ease-in-out infinite;
+    }
+    
+    .qod-header{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    
+    .qod-header h2{
+      color: #fbbf24;
+      margin: 0;
+      font-size: 1.5rem;
+      text-shadow: 0 0 20px rgba(251, 191, 36, 0.3);
+    }
+    
+    .qod-date{
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+    
+    .qod-content{
+      text-align: center;
+    }
+    
+    .qod-quote{
+      margin-bottom: 20px;
+    }
+    
+    .qod-actions{
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+    }
+    
+    .qod-share, .qod-save{
+      padding: 10px 20px;
+      border-radius: 25px;
+      border: none;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .qod-share{
+      background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+      color: white;
+      box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+    }
+    
+    .qod-share:hover{
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+    }
+    
+    .qod-save{
+      background: linear-gradient(135deg, #ec4899, #be185d);
+      color: white;
+      box-shadow: 0 4px 15px rgba(236, 72, 153, 0.3);
+    }
+    
+    .qod-save:hover{
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(236, 72, 153, 0.4);
+    }
+    
+    @media (max-width:640px){
+      .qod-header{
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+      }
+      
+      .qod-header h2{
+        font-size: 1.3rem;
+      }
+      
+      .qod-actions{
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .qod-share, .qod-save{
+        width: 200px;
+        justify-content: center;
+      }
+    }
+
+    /* Enhanced Mobile Optimization */
+    @media (max-width:640px){
+      .wrap{
+        padding:15px;
+      }
+      
+      header{
+        padding:15px 0;
+        margin-bottom:20px;
+      }
+      
+      .brand{
+        font-size:1.8rem;
+      }
+      
+      .panel{
+        padding:20px;
+        border-radius:16px;
+      }
+      
+      .card{
+        padding:20px;
+        min-height:140px;
+      }
+      
+      .spin{
+        padding:10px 16px;
+        font-size:0.9rem;
+      }
+      
+      .show-all{
+        padding:8px 12px;
+        font-size:0.85rem;
+      }
+      
+      .big-button{
+        padding:10px 16px;
+        font-size:0.9rem;
+      }
+      
+      .quote-large{
+        font-size:1.2rem;
+      }
+      
+      .quote-author{
+        font-size:0.9rem;
+      }
+      
+      .spin, .show-all, .big-button{
+        padding:10px 16px;
+        font-size:0.85rem;
+      }
+      
+      footer{
+        padding:30px 15px;
+        margin-top:30px;
+      }
+      
+      .footer-quote{
+        font-size:1rem;
+      }
+      
+      .social{
+        width:45px;
+        height:45px;
+      }
+    }
+    
+    @media (max-width:480px){
+      .brand{
+        font-size:1.5rem;
+      }
+      
+      .panel{
+        padding:15px;
+      }
+      
+      .card{
+        padding:15px;
+        min-height:120px;
+      }
+      
+      .quote-large{
+        font-size:1.1rem;
+      }
+      
+      .spin, .show-all, .big-button{
+        padding:8px 14px;
+        font-size:0.8rem;
+      }
+    }
+
+    /* Performance Optimizations */
+    .panel, .card, footer{
+      will-change: transform;
+    }
+    
+    /* Reduced motion for accessibility */
+    @media (prefers-reduced-motion: reduce){
+      *, *::before, *::after{
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+    
+    /* Modal Styles */
+    .modal{
+      position:fixed;
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
+      background:rgba(0,0,0,0.8);
+      backdrop-filter:blur(10px);
+      z-index:10000;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      animation:fadeIn 0.3s ease;
+    }
+    
+    .modal-content{
+      background:var(--glass);
+      backdrop-filter:blur(20px);
+      border:1px solid rgba(255,255,255,0.1);
+      border-radius:var(--radius);
+      max-width:90vw;
+      max-height:90vh;
+      overflow-y:auto;
+      animation:slideIn 0.3s ease;
+      position:relative;
+    }
+    
+    @keyframes slideIn{
+      from{
+        opacity:0;
+        transform:translateY(-50px) scale(0.9);
+      }
+      to{
+        opacity:1;
+        transform:translateY(0) scale(1);
+      }
+    }
+    
+    .modal-header{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:25px 30px 20px;
+      border-bottom:1px solid rgba(255,255,255,0.1);
+    }
+    
+    .modal-header h2{
+      margin:0;
+      color:var(--text-primary);
+      font-size:clamp(1.3rem, 3vw, 1.8rem);
+      font-weight:700;
+    }
+    
+    .modal-close{
+      background:none;
+      border:none;
+      color:var(--text-secondary);
+      font-size:2rem;
+      cursor:pointer;
+      padding:5px;
+      border-radius:50%;
+      transition:all 0.3s ease;
+      width:40px;
+      height:40px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+    
+    .modal-close:hover{
+      background:rgba(255,255,255,0.1);
+      color:var(--text-primary);
+      transform:scale(1.1);
+    }
+    
+    /* Login Form Styles */
+    .login-form{
+      padding:30px;
+      max-width:400px;
+    }
+    
+    .form-group{
+      margin-bottom:20px;
+    }
+    
+    .form-group label{
+      display:block;
+      margin-bottom:8px;
+      color:var(--text-primary);
+      font-weight:500;
+      font-size:0.95rem;
+    }
+    
+    .form-group input{
+      width:100%;
+      padding:12px 16px;
+      background:var(--card-bg);
+      border:1px solid rgba(255,255,255,0.1);
+      border-radius:12px;
+      color:var(--text-primary);
+      font-size:1rem;
+      transition:all 0.3s ease;
+      box-sizing:border-box;
+    }
+    
+    .form-group input:focus{
+      outline:none;
+      border-color:var(--accent);
+      box-shadow:0 0 0 3px rgba(233, 69, 96, 0.1);
+      background:var(--card-hover);
+    }
+    
+    .form-group input::placeholder{
+      color:var(--text-muted);
+    }
+    
+    .login-submit{
+      width:100%;
+      padding:14px 20px;
+      background:var(--gradient-6);
+      color:white;
+      border:none;
+      border-radius:12px;
+      font-size:1rem;
+      font-weight:700;
+      cursor:pointer;
+      transition:all 0.3s ease;
+      box-shadow:0 8px 25px rgba(240, 147, 251, 0.4);
+    }
+    
+    .login-submit:hover{
+      transform:translateY(-2px);
+      box-shadow:0 12px 35px rgba(240, 147, 251, 0.5);
+    }
+    
+    .login-submit:active{
+      transform:translateY(0) scale(0.98);
+    }
+    
+    .modal-body{
+      padding:30px;
+      max-height:60vh;
+      overflow-y:auto;
+    }
+    
+    .modal-body h3{
+      color:var(--text-primary);
+      font-size:1.1rem;
+      font-weight:600;
+      margin:20px 0 10px 0;
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+    
+    .modal-body p{
+      color:var(--text-secondary);
+      line-height:1.6;
+      margin-bottom:15px;
+    }
+    
+    .modal-body strong{
+      color:var(--text-primary);
+      font-weight:600;
+    }
+    
+    .modal-body em{
+      color:var(--text-muted);
+      font-style:italic;
+    }
+    
+    /* Showroom Styles */
+    .showroom-content{
+      width:90vw;
+      max-width:800px;
+      max-height:80vh;
+    }
+    
+    .showroom-grid{
+      padding:30px;
+      display:grid;
+      grid-template-columns:repeat(auto-fill, minmax(300px, 1fr));
+      gap:20px;
+      max-height:60vh;
+      overflow-y:auto;
+    }
+    
+    .showroom-quote{
+      background:var(--card-bg);
+      backdrop-filter:blur(10px);
+      border:1px solid rgba(255,255,255,0.1);
+      border-radius:16px;
+      padding:20px;
+      transition:all 0.3s ease;
+      position:relative;
+      overflow:hidden;
+    }
+    
+    .showroom-quote::before{
+      content:'';
+      position:absolute;
+      top:0;
+      left:0;
+      right:0;
+      bottom:0;
+      background:var(--gradient-1);
+      opacity:0;
+      transition:opacity 0.3s ease;
+    }
+    
+    .showroom-quote:hover{
+      background:var(--card-hover);
+      transform:translateY(-5px) scale(1.02);
+      box-shadow:0 20px 40px rgba(0,0,0,0.4);
+      border-color:rgba(255,255,255,0.2);
+    }
+    
+    .showroom-quote:hover::before{
+      opacity:0.1;
+    }
+    
+    .showroom-quote > *{
+      position:relative;
+      z-index:1;
+    }
+    
+    .showroom-quote-text{
+      color:var(--text-primary);
+      font-size:1rem;
+      line-height:1.6;
+      margin-bottom:10px;
+      font-style:italic;
+    }
+    
+    .showroom-quote-author{
+      color:var(--text-secondary);
+      font-size:0.9rem;
+      font-weight:500;
+      text-align:right;
+    }
+    
+    .copy-quote-btn{
+      padding:8px 12px;
+      background:var(--gradient-3);
+      color:white;
+      border:none;
+      border-radius:8px;
+      font-size:0.85rem;
+      font-weight:600;
+      cursor:pointer;
+      transition:all 0.3s ease;
+      box-shadow:0 4px 12px rgba(0, 180, 255, 0.3);
+      display:flex;
+      align-items:center;
+      gap:6px;
+    }
+    
+    .copy-quote-btn:hover{
+      transform:translateY(-2px);
+      box-shadow:0 6px 20px rgba(0, 180, 255, 0.4);
+    }
+    
+    .copy-quote-btn:active{
+      transform:translateY(0) scale(0.95);
+    }
+    
+    @media (max-width:640px){
+      .showroom-grid{
+        grid-template-columns:1fr;
+        padding:20px;
+        gap:15px;
+      }
+      
+      .showroom-quote{
+        padding:15px;
+      }
+      
+      .sign-in-form{
+        padding:20px;
+      }
+      
+      .modal-content{
+        margin:20px;
+        max-width:calc(100vw - 40px);
+      }
+    }
+
+    .loading-screen {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #000000;
+      overflow: hidden;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 99999;
+    }
+
+    .loading-screen::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1), transparent 50%),
+                  radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.08), transparent 50%),
+                  radial-gradient(circle at 90% 20%, rgba(255, 255, 255, 0.05), transparent 50%);
+      pointer-events: none;
+      animation: floatAnimation 8s ease-in-out infinite;
+    }
+
+    .loader-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+    }
+
+    .modern-loader {
+      display: flex;
+      justify-content: space-between;
+      width: 100px;
+      height: 100px;
+    }
+
+    .loader-ring {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: #FFFFFF;
+      animation: loaderRing 2s ease-in-out infinite;
+    }
+
+    .loader-ring:nth-child(1) {
+      animation-delay: 0s;
+    }
+
+    .loader-ring:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+
+    .loader-ring:nth-child(3) {
+      animation-delay: 0.4s;
+    }
+
+    .loader-ring:nth-child(4) {
+      animation-delay: 0.6s;
+    }
+
+    @keyframes loaderRing {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.2);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    .loading-logo{
+      font-weight:900;
+      font-size:2.5rem;
+      letter-spacing:0.1em;
+      background: linear-gradient(45deg, #ffffff, #e0e7ff, #ffffff);
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+      text-shadow:0 0 30px rgba(255, 255, 255, 0.5);
+      animation: logoGlow 2s ease-in-out infinite;
+      margin-bottom:10px;
+    }
+    
+    @keyframes logoGlow{
+      0%,100%{filter:brightness(1)}
+      50%{filter:brightness(1.3)}
+    }
+    
+    .loading-text {
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 1.2rem;
+      font-weight: 300;
+      letter-spacing: 2px;
+      animation: pulse 1.5s ease-in-out infinite;
+    }
+
+    .loading-percentage {
+      color: #FFFFFF;
+      font-size: 2rem;
+      font-weight: 700;
+      margin-top: 20px;
+      font-family: 'Arial Black', sans-serif;
+      background: linear-gradient(45deg, #FFFFFF, #F0F0F0, #FFFFFF);
+      background-size: 400% 400%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: colorShift 3s ease-in-out infinite;
+    }
+
+    /* Hide loading screen when done */
+    .loading-screen.hidden {
+      display: none;
+    }
+
+    /* Hide main content initially */
+    .loading-screen:not(.hidden) ~ .wrap {
+      display: none;
+    }
+  </style>
+
+
+</style>
+</head>
+<body>
+  <!-- Modern Loading Screen -->
+  <div class="loading-screen" id="loadingScreen">
+    <div class="loader-container">
+      <div class="modern-loader">
+        <div class="loader-ring"></div>
+        <div class="loader-ring"></div>
+        <div class="loader-ring"></div>
+        <div class="loader-ring"></div>
+      </div>
+      <div class="loading-logo">MANZY WRLD</div>
+      <div class="loading-text">Daily Quotes</div>
+      <div class="loading-percentage" id="loadingPercentage">0%</div>
+    </div>
+  </div>
+
+
+    <!-- Content Modals -->
+    <div id="aboutModal" class="modal" style="display:none;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>About MANZY WRLD</h2>
+          <button class="modal-close" onclick="closeAboutModal()">&times;</button>
+        </div>
+        <div class="modal-body">
+          <h3>🌟 Our Mission</h3>
+          <p>MANZY WRLD is your daily source of inspiration and motivation. We believe that words have the power to transform lives, uplift spirits, and provide the courage needed to face life's challenges.</p>
+          
+          <h3>💫 What We Offer</h3>
+          <p>Our platform provides carefully curated quotes across different emotional categories - whether you're feeling sad, happy, overwhelmed, or motivated, we have the perfect words to match your mood and guide your day.</p>
+          
+          <h3>🎯 Our Vision</h3>
+          <p>To create a world where everyone has access to daily inspiration that helps them grow, overcome obstacles, and become the best version of themselves. Every quote shared is a step toward someone's breakthrough moment.</p>
+          
+          <h3>👨‍💻 Founder</h3>
+          <p>Created by Emmanuel Chinamwiri, MANZY WRLD combines passion for motivation with technology to deliver inspiration in the most accessible and beautiful way possible.</p>
+        </div>
+      </div>
+    </div>
+    
+    <div id="privacyModal" class="modal" style="display:none;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Privacy Policy</h2>
+          <button class="modal-close" onclick="closePrivacyModal()">&times;</button>
+        </div>
+        <div class="modal-body">
+          <h3>🔒 Your Privacy Matters</h3>
+          <p>At MANZY WRLD, we take your privacy seriously and are committed to protecting your personal information.</p>
+          
+          <h3>📊 Information We Collect</h3>
+          <p><strong>Usage Data:</strong> How you interact with our quotes and features</p>
+          <p><strong>Preferences:</strong> Your favorite categories and saved quotes</p>
+          <p><strong>Technical Data:</strong> Browser type, device information for optimization</p>
+          
+          <h3>🛡️ How We Protect Your Data</h3>
+          <p><strong>No Personal Tracking:</strong> We don't track your personal identity</p>
+          <p><strong>Local Storage:</strong> Your preferences are stored locally on your device</p>
+          <p><strong>Secure Connections:</strong> All data transmissions use encryption</p>
+          
+          <h3>🤝 Your Rights</h3>
+          <p>You have the right to access, modify, or delete your data at any time. Contact us if you have privacy concerns.</p>
+        </div>
+      </div>
+    </div>
+    
+    <div id="cookiesModal" class="modal" style="display:none;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Cookie Policy</h2>
+          <button class="modal-close" onclick="closeCookiesModal()">&times;</button>
+        </div>
+        <div class="modal-body">
+          <h3>🍪 What Are Cookies?</h3>
+          <p>Cookies are small text files stored on your device that help us provide you with a better experience on MANZY WRLD.</p>
+          
+          <h3>🌟 Types of Cookies We Use</h3>
+          <p><strong>Essential Cookies:</strong> Required for basic site functionality</p>
+          <p><strong>Preference Cookies:</strong> Remember your favorite categories and settings</p>
+          <p><strong>Analytics Cookies:</strong> Help us improve the site (anonymous only)</p>
+          
+          <h3>✨ Benefits of Our Cookies</h3>
+          <p>• Personalized quote recommendations</p>
+          <p>• Remember your favorite categories</p>
+          <p>• Improved site performance</p>
+          <p>• Better user experience</p>
+          
+          <h3>🔧 Managing Your Cookies</h3>
+          <p>You can control or delete cookies through your browser settings. Disabling certain cookies may affect site functionality.</p>
+          
+          <p><em>By using MANZY WRLD, you consent to our use of cookies as described in this policy.</em></p>
+        </div>
+      </div>
+    </div>
+    
+    <div id="termsModal" class="modal" style="display:none;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Terms & Conditions</h2>
+          <button class="modal-close" onclick="closeTermsModal()">&times;</button>
+        </div>
+        <div class="modal-body">
+          <h3>📜 Welcome to MANZY WRLD</h3>
+          <p>These terms govern your use of our inspirational quotes platform. By using MANZY WRLD, you agree to these terms.</p>
+          
+          <h3>✅ Acceptable Use</h3>
+          <p>• Enjoy and share our inspirational content</p>
+          <p>• Save your favorite quotes for personal use</p>
+          <p>• Use quotes for personal motivation and growth</p>
+          <p>• Share our platform with others</p>
+          
+          <h3>🚫 Prohibited Activities</h3>
+          <p>• Do not reproduce content for commercial purposes</p>
+          <p>• Do not claim ownership of quotes</p>
+          <p>• Do not use content for harmful purposes</p>
+          <p>• Do not attempt to compromise site security</p>
+          
+          <h3>📚 Content Rights</h3>
+          <p>All quotes are shared for inspirational purposes. While we strive for accuracy, we cannot guarantee the authenticity of all attributed quotes.</p>
+          
+          <h3>⚖️ Limitation of Liability</h3>
+          <p>MANZY WRLD provides content "as is" without warranties. We are not liable for decisions made based on our content.</p>
+          
+          <h3>🔄 Changes to Terms</h3>
+          <p>We may update these terms periodically. Continued use of the site constitutes acceptance of any changes.</p>
+          
+          <p><strong>Last Updated:</strong> March 2026</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal" style="display:none;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Login to MANZY WRLD</h2>
+          <button class="modal-close" onclick="closeLoginModal()">&times;</button>
+        </div>
+        <form class="login-form" onsubmit="handleLogin(event)">
+          <div class="form-group">
+            <label for="loginUsername">Username</label>
+            <input type="text" id="loginUsername" name="username" required placeholder="Enter your username">
+          </div>
+          <div class="form-group">
+            <label for="loginPassword">Password</label>
+            <input type="password" id="loginPassword" name="password" required placeholder="Enter your password">
+          </div>
+          <button type="submit" class="login-submit">Login to MANZY WRLD</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Showroom Modal -->
+    <div id="showroomModal" class="modal" style="display:none;">
+      <div class="modal-content showroom-content">
+        <div class="modal-header">
+          <h2>All Quotes - <span id="showroomCategory"></span></h2>
+          <button class="modal-close" onclick="closeShowroomModal()">&times;</button>
+        </div>
+        <div class="showroom-grid" id="showroomGrid">
+          <!-- Quotes will be inserted here -->
+        </div>
+      </div>
+    </div>
+  <div class="wrap">
+    <header>
+      <div>
+        <div class="brand">MANZY WRLD</div>
+      </div>
+      <div style="margin-left:auto;display:flex;gap:10px">
+        <button id="loginBtn" class="big-button" aria-label="Login">Login</button>
+      </div>
+    </header>
+
+    <main class="hero">
+      <!-- Search Section - Top Priority -->
+      <section class="panel search-hero">
+        <div class="search-hero-header">
+          <h2>🔍 Find Your Perfect Quote</h2>
+          <p>Search through hundreds of inspirational quotes by text, author, or category</p>
+        </div>
+        <div class="search-container">
+          <input type="text" id="searchInput" placeholder="Search quotes, authors, or keywords..." class="search-input" aria-label="Search quotes">
+          <button id="searchBtn" class="search-btn" aria-label="Search">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+        <div class="search-filters">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="text">Quotes</button>
+          <button class="filter-btn" data-filter="author">Authors</button>
+          <button class="filter-btn" data-filter="category">Categories</button>
+        </div>
+        <div id="searchResults" class="search-results" style="display:none;"></div>
+      </section>
+
+      <!-- Quote of the Day Section -->
+      <section class="panel quote-of-day">
+        <div class="qod-header">
+          <h2>✨ Quote of the Day</h2>
+          <span class="qod-date" id="todayDate"></span>
+        </div>
+        <div class="qod-content">
+          <div class="qod-quote" id="quoteOfTheDay">
+            <div class="quote-large"><i class="fas fa-star" style="color: #fbbf24; margin-right: 10px; font-size: 1.2em;"></i><span id="qodText">Loading today's inspiration...</span></div>
+            <div class="quote-author" id="qodAuthor"></div>
+          </div>
+          <div class="qod-actions">
+            <button class="qod-share" onclick="shareQuoteOfTheDay()"><i class="fas fa-share-alt"></i> Share</button>
+            <button class="qod-save" onclick="saveQuoteOfTheDay()"><i class="fas fa-heart"></i> Save</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Main Quote Section -->
+      <section class="panel main-quote-section">
+        <div class="section-header">
+          <h2>📖 Today's Inspiration</h2>
+          <p>Click any mood button below or use the random generator for more quotes</p>
+        </div>
+        <div id="mainQuote">
+          <div class="quote-large"><i class="fas fa-quote-left" style="color: var(--accent); margin-right: 10px; font-size: 1.2em;"></i><span id="quoteText">Loading inspirational thought…</span></div>
+          <div class="quote-author" id="quoteAuthor"></div>
+          <div style="display:flex;gap:8px;margin-top:10px;align-items:center">
+            <button id="copyBtn" class="big-button" aria-label="Copy quote"><i class="fas fa-copy"></i></button>
+            <button id="favBtn" class="big-button" aria-label="Favorite">☆ Save</button>
+            <button id="randomBtn" class="big-button" aria-label="Random quote" style="background: linear-gradient(135deg, #a855f7, #7c3aed);"><i class="fas fa-random"></i> Surprise Me</button>
+            <div class="share-dropdown">
+              <button id="shareBtn" class="share-button" aria-label="Share quote">
+                <i class="fas fa-share-alt"></i> Share
+              </button>
+              <div id="shareMenu" class="share-menu">
+                <button class="share-option" onclick="shareOnTwitter()">
+                  <i class="fab fa-twitter"></i> Twitter
+                </button>
+                <button class="share-option" onclick="shareOnFacebook()">
+                  <i class="fab fa-facebook"></i> Facebook
+                </button>
+                <button class="share-option" onclick="shareOnWhatsApp()">
+                  <i class="fab fa-whatsapp"></i> WhatsApp
+                </button>
+                <button class="share-option" onclick="shareOnLinkedIn()">
+                  <i class="fab fa-linkedin"></i> LinkedIn
+                </button>
+                <button class="share-option" onclick="copyShareLink()">
+                  <i class="fas fa-link"></i> Copy Link
+                </button>
+              </div>
+            </div>
+            <div id="quoteCatBadge" style="margin-left:auto;color:var(--muted);font-weight:700;font-size:0.9rem"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Mood Categories Section -->
+      <section class="panel mood-section">
+        <div class="section-header">
+          <h2>🎭 What's Your Mood Today?</h2>
+          <p>Choose your current mood to get perfectly matched quotes</p>
+        </div>
+        <div class="mood-grid">
+          <button class="mood-btn" data-cat="sad" aria-label="Get sad quotes">
+            <span class="mood-icon">😢</span>
+            <span class="mood-label">Sad</span>
+          </button>
+          <button class="mood-btn" data-cat="happy" aria-label="Get happy quotes">
+            <span class="mood-icon">😊</span>
+            <span class="mood-label">Happy</span>
+          </button>
+          <button class="mood-btn" data-cat="overwhelmed" aria-label="Get overwhelmed quotes">
+            <span class="mood-icon">😵</span>
+            <span class="mood-label">Overwhelmed</span>
+          </button>
+          <button class="mood-btn" data-cat="motivational" aria-label="Get motivational quotes">
+            <span class="mood-icon">🚀</span>
+            <span class="mood-label">Motivational</span>
+          </button>
+          <button class="mood-btn" data-cat="birthday" aria-label="Get birthday quotes">
+            <span class="mood-icon">🎂</span>
+            <span class="mood-label">Birthday</span>
+          </button>
+          <button class="mood-btn" data-cat="inspirational" aria-label="Get inspirational quotes">
+            <span class="mood-icon">✨</span>
+            <span class="mood-label">Inspirational</span>
+          </button>
+          <button class="mood-btn" data-cat="grateful" aria-label="Get grateful quotes">
+            <span class="mood-icon">🙏</span>
+            <span class="mood-label">Grateful</span>
+          </button>
+          <button class="mood-btn" data-cat="peaceful" aria-label="Get peaceful quotes">
+            <span class="mood-icon">🕊️</span>
+            <span class="mood-label">Peaceful</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- Quote Categories Grid -->
+      <section class="panel categories-section">
+        <div class="section-header">
+          <h2>📚 Explore Quote Collections</h2>
+          <p>Browse through our curated quote categories</p>
+        </div>
+        <div class="grid" id="cards">
+          <!-- cards inserted by JS -->
+        </div>
+      </section>
+
+      <!-- Reading Stats Section -->
+      <section class="panel stats-section">
+        <div class="section-header">
+          <h2>📊 Your Reading Journey</h2>
+          <p>Track your progress and export your favorite quotes</p>
+        </div>
+        <div class="stats-container">
+          <div class="stat-item">
+            <span class="stat-number" id="totalQuotesViewed">0</span>
+            <span class="stat-label">Quotes Read</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" id="favoriteCount">0</span>
+            <span class="stat-label">Favorites</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" id="daysActive">0</span>
+            <span class="stat-label">Days Active</span>
+          </div>
+        </div>
+        <div class="stats-actions">
+          <button id="exportHistory" class="stats-btn" aria-label="Export quote history">
+            <i class="fas fa-download"></i> Export History
+          </button>
+          <button id="clearViewed" class="stats-btn" aria-label="Clear recently viewed quotes">
+            <i class="fas fa-trash"></i> Clear Viewed
+          </button>
+          <button id="showFavs" class="stats-btn" aria-label="Show favorite quotes">
+            <i class="fas fa-heart"></i> Show Favorites
+          </button>
+        </div>
+        <div style="height:15px"></div>
+        <div class="history-section">
+          <h4>Recently Viewed</h4>
+          <div id="viewedList" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <!-- Sidebar moved to bottom as mobile-friendly section -->
+      <aside class="panel sidebar-section">
+        <div class="section-header">
+          <h2>⚙️ Quick Actions</h2>
+        </div>
+        <div class="quick-actions">
+          <button id="loginBtn" class="quick-action-btn" aria-label="Login">
+            <i class="fas fa-user"></i> Login
+          </button>
+          <button class="quick-action-btn" onclick="showAboutModal()">
+            <i class="fas fa-info-circle"></i> About
+          </button>
+          <button class="quick-action-btn" onclick="showPrivacyModal()">
+            <i class="fas fa-shield-alt"></i> Privacy
+          </button>
+          <button class="quick-action-btn" onclick="showCookiesModal()">
+            <i class="fas fa-cookie"></i> Cookies
+          </button>
+          <button class="quick-action-btn" onclick="showTermsModal()">
+            <i class="fas fa-file-contract"></i> Terms
+          </button>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-quote">Start small. Show up often. Consistent courage moves mountains. — MANZY WRLD</div>
+        <div class="footer-sep" aria-hidden="true"></div>
+        <div class="footer-row" role="navigation" aria-label="social links">
+          <a class="social" href="https://x.com/manzychinamwiri" target="_blank" aria-label="X"><i class="fab fa-x fa-lg"></i></a>
+          <a class="social" href="https://facebook.com/emmanuel.chinamwiri" target="_blank" aria-label="Facebook"><i class="fab fa-facebook fa-lg"></i></a>
+          <a class="social" href="https://wa.me/0980851937" target="_0980851937" aria-label="WhatsApp"><i class="fab fa-whatsapp fa-lg"></i></a>
+        </div>
+        <div class="footer-links cookie-like" aria-label="footer links">
+          <a href="#about" onclick="showAboutModal(); return false;">About</a>
+          <a href="#privacy" onclick="showPrivacyModal(); return false;">Privacy</a>
+          <a href="#cookies" onclick="showCookiesModal(); return false;">Cookies</a>
+          <a href="#terms" onclick="showTermsModal(); return false;">Terms & Conditions</a>
+        </div>
+        <div class="footer-sep" aria-hidden="true"></div>
+        <div class="footer-meta">© 2026 MANZY WRLD — Emmanuel Chinamwiri</div>
+      </div>
+    </footer>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast" style="display:none;">
+      <i class="fas fa-check-circle"></i>
+      <span id="toastMessage">Quote copied!</span>
+    </div>
+
+    <script>
+    // Mood buttons functionality
+    function initMoodButtons() {
+      const moodButtons = document.querySelectorAll('.mood-btn');
+      moodButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const category = btn.dataset.cat;
+          showDaily(category);
+          addViewed(category, window.currentQuote);
+          
+          // Add visual feedback
+          moodButtons.forEach(b => b.style.background = 'rgba(255, 255, 255, 0.05)');
+          btn.style.background = 'rgba(59, 130, 246, 0.2)';
+          btn.style.borderColor = 'rgba(59, 130, 246, 0.5)';
+          
+          showToast(`${category.charAt(0).toUpperCase() + category.slice(1)} quote loaded!`);
+        });
+      });
+    }
+    
+    // Search functionality
+    let currentSearchFilter = 'all';
+    
+    function initSearch() {
+      const searchInput = document.getElementById('searchInput');
+      const searchBtn = document.getElementById('searchBtn');
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      
+      // Search on input
+      searchInput.addEventListener('input', performSearch);
+      
+      // Search on button click
+      searchBtn.addEventListener('click', performSearch);
+      
+      // Search on Enter key
+      searchInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') performSearch();
+      });
+      
+      // Filter buttons
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          currentSearchFilter = btn.dataset.filter;
+          performSearch();
+        });
+      });
+    }
+    
+    function performSearch() {
+      const query = document.getElementById('searchInput').value.trim().toLowerCase();
+      const resultsContainer = document.getElementById('searchResults');
+      
+      if (!query) {
+        resultsContainer.style.display = 'none';
+        return;
+      }
+      
+      const results = searchQuotes(query, currentSearchFilter);
+      displaySearchResults(results, query);
+    }
+    
+    function searchQuotes(query, filter) {
+      const results = [];
+      
+      if (filter === 'all' || filter === 'text') {
+        // Search in quote text
+        Object.entries(quotes).forEach(([category, quoteList]) => {
+          quoteList.forEach(quote => {
+            const parts = quote.split(' – ');
+            const text = parts[0].toLowerCase();
+            const author = parts[1] || 'Unknown';
+            
+            if (text.includes(query)) {
+              results.push({
+                type: 'quote',
+                category,
+                quote,
+                text: parts[0],
+                author,
+                match: text
+              });
+            }
+          });
+        });
+      }
+      
+      if (filter === 'all' || filter === 'author') {
+        // Search in authors
+        Object.entries(quotes).forEach(([category, quoteList]) => {
+          quoteList.forEach(quote => {
+            const parts = quote.split(' – ');
+            const text = parts[0];
+            const author = (parts[1] || 'Unknown').toLowerCase();
+            
+            if (author.includes(query)) {
+              results.push({
+                type: 'author',
+                category,
+                quote,
+                text,
+                author: parts[1] || 'Unknown',
+                match: author
+              });
+            }
+          });
+        });
+      }
+      
+      if (filter === 'all' || filter === 'category') {
+        // Search in categories
+        categories.forEach(category => {
+          if (category.toLowerCase().includes(query)) {
+            quotes[category].forEach(quote => {
+              const parts = quote.split(' – ');
+              results.push({
+                type: 'category',
+                category,
+                quote,
+                text: parts[0],
+                author: parts[1] || 'Unknown',
+                match: category
+              });
+            });
+          }
+        });
+      }
+      
+      // Remove duplicates and limit results
+      const uniqueResults = [];
+      const seen = new Set();
+      
+      results.forEach(result => {
+        const key = result.quote;
+        if (!seen.has(key)) {
+          seen.add(key);
+          uniqueResults.push(result);
+        }
+      });
+      
+      return uniqueResults.slice(0, 20); // Limit to 20 results
+    }
+    
+    function displaySearchResults(results, query) {
+      const resultsContainer = document.getElementById('searchResults');
+      
+      if (results.length === 0) {
+        resultsContainer.innerHTML = `
+          <div style="text-align: center; padding: 20px; color: rgba(255, 255, 255, 0.6);">
+            <i class="fas fa-search" style="font-size: 2rem; margin-bottom: 10px; display: block;"></i>
+            No quotes found for "${query}"
+          </div>
+        `;
+      } else {
+        resultsContainer.innerHTML = results.map(result => {
+          const highlightText = (text, match) => {
+            const regex = new RegExp(`(${match})`, 'gi');
+            return text.replace(regex, '<strong>$1</strong>');
+          };
+          
+          return `
+            <div class="search-result-item" onclick="selectSearchResult('${result.category}', '${result.quote.replace(/'/g, "\\'")}')">
+              <div class="search-result-text">${highlightText(result.text, query)}</div>
+              <div class="search-result-author">${highlightText(result.author, query)}</div>
+              <div class="search-result-category">${result.category}</div>
+            </div>
+          `;
+        }).join('');
+      }
+      
+      resultsContainer.style.display = 'block';
+    }
+    
+    function selectSearchResult(category, quote) {
+      showDailyFromQuote(category, quote);
+      addViewed(category, quote);
+      document.getElementById('searchResults').style.display = 'none';
+      document.getElementById('searchInput').value = '';
+      showToast('Quote selected!');
+    }
+    
+    // Social Media Sharing
+    function initSocialSharing() {
+      const shareBtn = document.getElementById('shareBtn');
+      const shareMenu = document.getElementById('shareMenu');
+      
+      if (shareBtn && shareMenu) {
+        // Toggle share menu
+        shareBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          shareMenu.classList.toggle('active');
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+          if (!shareBtn.contains(e.target) && !shareMenu.contains(e.target)) {
+            shareMenu.classList.remove('active');
+          }
+        });
+      }
+    }
+    
+    function getCurrentQuoteText() {
+      const quoteText = document.getElementById('quoteText').textContent;
+      const quoteAuthor = document.getElementById('quoteAuthor').textContent;
+      return `${quoteText} ${quoteAuthor}`;
+    }
+    
+    function shareOnTwitter() {
+      const text = getCurrentQuoteText();
+      const url = window.location.href;
+      const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`;
+      window.open(twitterUrl, '_blank', 'width=600,height=400');
+      showToast('Opening Twitter... 🐦');
+    }
+    
+    function shareOnFacebook() {
+      const url = window.location.href;
+      const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
+      window.open(facebookUrl, '_blank', 'width=600,height=400');
+      showToast('Opening Facebook... 📘');
+    }
+    
+    function shareOnWhatsApp() {
+      const text = getCurrentQuoteText();
+      const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(text)}`;
+      window.open(whatsappUrl, '_blank');
+      showToast('Opening WhatsApp... 💬');
+    }
+    
+    function shareOnLinkedIn() {
+      const text = getCurrentQuoteText();
+      const url = window.location.href;
+      const linkedInUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}&summary=${encodeURIComponent(text)}`;
+      window.open(linkedInUrl, '_blank', 'width=600,height=400');
+      showToast('Opening LinkedIn... 💼');
+    }
+    
+    function copyShareLink() {
+      const text = getCurrentQuoteText();
+      const url = window.location.href;
+      const shareText = `${text}\n\nRead more inspiring quotes at: ${url}`;
+      
+      navigator.clipboard.writeText(shareText).then(() => {
+        showToast('Share link copied to clipboard! 📋');
+      }).catch(err => {
+        console.error('Failed to copy share link: ', err);
+        showToast('Failed to copy share link');
+      });
+    }
+    
+    // Enhanced Quote History & Stats
+    function initQuoteHistory() {
+      const exportBtn = document.getElementById('exportHistory');
+      if (exportBtn) {
+        exportBtn.addEventListener('click', exportQuoteHistory);
+      }
+      
+      updateReadingStats();
+    }
+    
+    function updateReadingStats() {
+      // Calculate total unique quotes viewed
+      const uniqueQuotes = new Set(viewed.map(v => v.quote));
+      document.getElementById('totalQuotesViewed').textContent = uniqueQuotes.size;
+      
+      // Update favorites count
+      document.getElementById('favoriteCount').textContent = favorites.length;
+      
+      // Calculate days active
+      const firstVisit = localStorage.getItem('firstVisit') || new Date().toISOString();
+      const daysActive = Math.ceil((new Date() - new Date(firstVisit)) / (1000 * 60 * 60 * 24));
+      document.getElementById('daysActive').textContent = daysActive;
+      
+      // Save first visit if not exists
+      if (!localStorage.getItem('firstVisit')) {
+        localStorage.setItem('firstVisit', new Date().toISOString());
+      }
+    }
+    
+    function exportQuoteHistory() {
+      const exportData = {
+        exportDate: new Date().toISOString(),
+        stats: {
+          totalQuotesViewed: new Set(viewed.map(v => v.quote)).size,
+          favoritesCount: favorites.length,
+          daysActive: Math.ceil((new Date() - new Date(localStorage.getItem('firstVisit') || new Date())) / (1000 * 60 * 60 * 24))
+        },
+        recentlyViewed: viewed.slice(0, 10).map(v => ({
+          quote: v.quote,
+          category: v.cat,
+          timestamp: new Date().toISOString()
+        })),
+        favorites: favorites.map(f => ({
+          quote: f.quote,
+          category: f.cat,
+          timestamp: new Date().toISOString()
+        }))
+      };
+      
+      const dataStr = JSON.stringify(exportData, null, 2);
+      const dataUri = 'data:application/json;charset=utf-8,'+ encodeURIComponent(dataStr);
+      
+      const exportFileDefaultName = `manzy-wrld-history-${new Date().toISOString().split('T')[0]}.json`;
+      
+      const linkElement = document.createElement('a');
+      linkElement.setAttribute('href', dataUri);
+      linkElement.setAttribute('download', exportFileDefaultName);
+      linkElement.click();
+      
+      showToast('Quote history exported successfully! 📚');
+    }
+    
+    // Override addViewed to update stats
+    const originalAddViewed = addViewed;
+    addViewed = function(cat, quote) {
+      originalAddViewed(cat, quote);
+      updateReadingStats();
+    };
+    
+    // Override toggleFavorite to update stats
+    const originalToggleFavorite = toggleFavorite;
+    toggleFavorite = function(cat, quote) {
+      originalToggleFavorite(cat, quote);
+      updateReadingStats();
+    };
+    
+    // Random Quote Generator
+    function initRandomQuote() {
+      const randomBtn = document.getElementById('randomBtn');
+      if (randomBtn) {
+        randomBtn.addEventListener('click', generateRandomQuote);
+      }
+    }
+    
+    function generateRandomQuote() {
+      // Get all quotes from all categories
+      const allQuotes = [];
+      Object.entries(quotes).forEach(([category, quoteList]) => {
+        quoteList.forEach(quote => {
+          allQuotes.push({ category, quote });
+        });
+      });
+      
+      // Pick a random quote
+      const randomIndex = Math.floor(Math.random() * allQuotes.length);
+      const randomQuote = allQuotes[randomIndex];
+      
+      // Display the random quote
+      showDailyFromQuote(randomQuote.category, randomQuote.quote);
+      addViewed(randomQuote.category, randomQuote.quote);
+      
+      // Add a special animation for random quotes
+      const quoteElement = document.getElementById('mainQuote');
+      quoteElement.style.animation = 'none';
+      setTimeout(() => {
+        quoteElement.style.animation = 'slideIn 0.5s ease';
+      }, 10);
+      
+      showToast('Surprise! Here\'s a random quote for you! 🎲');
+    }
+    
+    // Quote of the Day functionality
+    function initQuoteOfTheDay() {
+      // Set today's date
+      const today = new Date();
+      const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+      document.getElementById('todayDate').textContent = today.toLocaleDateString('en-US', options);
+      
+      // Get or generate Quote of the Day based on date
+      const dateStr = today.toDateString();
+      const allQuotes = Object.values(quotes).flat();
+      const quoteIndex = dateStr.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0) % allQuotes.length;
+      const qodQuote = allQuotes[quoteIndex];
+      
+      // Display Quote of the Day
+      const parts = qodQuote.split(' – ');
+      const quoteText = parts[0];
+      const author = parts[1] || 'Unknown';
+      
+      document.getElementById('qodText').textContent = quoteText;
+      document.getElementById('qodAuthor').textContent = '— ' + author;
+      
+      // Store Quote of the Day
+      window.quoteOfTheDay = qodQuote;
+    }
+    
+    function shareQuoteOfTheDay() {
+      const quoteText = document.getElementById('qodText').textContent;
+      const author = document.getElementById('qodAuthor').textContent;
+      const fullQuote = `${quoteText} ${author}`;
+      
+      // Create share text
+      const shareText = `Quote of the Day from MANZY WRLD:\n\n${fullQuote}\n\n#MANZYWRLD #DailyInspiration`;
+      
+      // Try to share using Web Share API if available
+      if (navigator.share) {
+        navigator.share({
+          title: 'Quote of the Day - MANZY WRLD',
+          text: shareText
+        }).catch(err => console.log('Share failed:', err));
+      } else {
+        // Fallback: Copy to clipboard
+        navigator.clipboard.writeText(shareText).then(() => {
+          showToast('Quote copied to clipboard for sharing!');
+        }).catch(err => {
+          console.error('Failed to copy quote: ', err);
+          showToast('Failed to copy quote');
+        });
+      }
+    }
+    
+    function saveQuoteOfTheDay() {
+      if (window.quoteOfTheDay) {
+        // Add to favorites
+        const allCategories = Object.keys(quotes);
+        let foundCategory = null;
+        
+        // Find which category contains this quote
+        for (const cat of allCategories) {
+          if (quotes[cat].includes(window.quoteOfTheDay)) {
+            foundCategory = cat;
+            break;
+          }
+        }
+        
+        if (foundCategory) {
+          toggleFavorite(foundCategory, window.quoteOfTheDay);
+        } else {
+          // Add as a special favorite
+          favorites.unshift({cat: 'quote-of-day', quote: window.quoteOfTheDay});
+          if(favorites.length>40) favorites.pop();
+          renderFavorites(); saveState();
+          showToast('Quote of the Day saved to favorites!');
+        }
+      }
+    }
+    
+    // Loading simulation
+    function simulateLoading() {
+      const loadingScreen = document.getElementById('loadingScreen');
+      const loadingPercentage = document.getElementById('loadingPercentage');
+      let percentage = 0;
+      
+      const loadingInterval = setInterval(() => {
+        percentage += Math.random() * 15;
+        if (percentage >= 100) {
+          percentage = 100;
+          loadingPercentage.textContent = percentage + '%';
+          
+          setTimeout(() => {
+            loadingScreen.classList.add('hidden');
+            // Initialize app when loading is done
+            if(typeof showDaily === 'function'){
+              showDaily(window.active || 'motivated'); 
+              if(typeof addViewed === 'function') 
+                addViewed(window.active || 'motivated', window.currentQuote || ''); 
+            }
+          }, 500);
+          
+          clearInterval(loadingInterval);
+        } else {
+          loadingPercentage.textContent = Math.floor(percentage) + '%';
+        }
+      }, 200);
+    }
+
+    // Content Modal Functions
+    function showAboutModal() {
+      document.getElementById('aboutModal').style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+    
+    function closeAboutModal() {
+      document.getElementById('aboutModal').style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+    
+    function showPrivacyModal() {
+      document.getElementById('privacyModal').style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+    
+    function closePrivacyModal() {
+      document.getElementById('privacyModal').style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+    
+    function showCookiesModal() {
+      document.getElementById('cookiesModal').style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+    
+    function closeCookiesModal() {
+      document.getElementById('cookiesModal').style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+    
+    function showTermsModal() {
+      document.getElementById('termsModal').style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+    
+    function closeTermsModal() {
+      document.getElementById('termsModal').style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+    
+    // Modal Functions
+    function openLoginModal() {
+      document.getElementById('loginModal').style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+    
+    function closeLoginModal() {
+      document.getElementById('loginModal').style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+    
+    function handleLogin(event) {
+      event.preventDefault();
+      const username = document.getElementById('loginUsername').value;
+      const password = document.getElementById('loginPassword').value;
+      
+      // Here you would normally authenticate with your backend
+      console.log('Login attempt:', { username, password });
+      
+      // For demo purposes, show success and close modal
+      alert(`Welcome back to MANZY WRLD, ${username}!`);
+      closeLoginModal();
+      
+      // Clear form
+      document.getElementById('loginUsername').value = '';
+      document.getElementById('loginPassword').value = '';
+    }
+    
+    function openShowroomModal(category) {
+      const modal = document.getElementById('showroomModal');
+      const categorySpan = document.getElementById('showroomCategory');
+      const grid = document.getElementById('showroomGrid');
+      
+      categorySpan.textContent = category.charAt(0).toUpperCase() + category.slice(1);
+      
+      // Clear existing content
+      grid.innerHTML = '';
+      
+      // Add all quotes for this category
+      quotes[category].forEach(quote => {
+        const quoteElement = document.createElement('div');
+        quoteElement.className = 'showroom-quote';
+        
+        // Split quote and author
+        const parts = quote.split(' – ');
+        const quoteText = parts[0];
+        const author = parts[1] || 'Unknown';
+        
+        quoteElement.innerHTML = `
+          <div class="showroom-quote-text">"${quoteText}"</div>
+          <div class="showroom-quote-author">— ${author}</div>
+          <div style="margin-top:15px;">
+            <button class="copy-quote-btn" onclick="copyShowroomQuote('${quoteText}', '${author}')">
+              <i class="fas fa-copy"></i> Copy
+            </button>
+          </div>
+        `;
+        
+        grid.appendChild(quoteElement);
+      });
+      
+      modal.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+    
+    function closeShowroomModal() {
+      document.getElementById('showroomModal').style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+    
+    // Close modals when clicking outside
+    window.addEventListener('click', (event) => {
+      if (event.target.classList.contains('modal')) {
+        event.target.style.display = 'none';
+        document.body.style.overflow = 'auto';
+      }
+    });
+    
+    // Add event listeners for buttons
+    document.addEventListener('DOMContentLoaded', () => {
+      // Login button
+      const loginBtn = document.getElementById('loginBtn');
+      if (loginBtn) {
+        loginBtn.addEventListener('click', openLoginModal);
+      }
+      
+      // Copy button
+      const copyBtn = document.getElementById('copyBtn');
+      if (copyBtn) {
+        copyBtn.addEventListener('click', copyQuote);
+      }
+      
+      // "See all" buttons
+      const showAllButtons = document.querySelectorAll('.show-all');
+      showAllButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+          const category = e.target.getAttribute('data-cat');
+          if (category) {
+            openShowroomModal(category);
+          }
+        });
+      });
+    });
+    
+    // Copy quote function
+    function copyQuote() {
+      const quoteText = document.getElementById('quoteText').textContent;
+      const quoteAuthor = document.getElementById('quoteAuthor').textContent;
+      const fullQuote = `${quoteText} ${quoteAuthor}`;
+      
+      // Copy to clipboard
+      navigator.clipboard.writeText(fullQuote).then(() => {
+        showToast('Quote copied to clipboard!');
+      }).catch(err => {
+        console.error('Failed to copy quote: ', err);
+        showToast('Failed to copy quote');
+      });
+    }
+    
+    // Copy showroom quote function
+    function copyShowroomQuote(quoteText, author) {
+      const fullQuote = `"${quoteText}" — ${author}`;
+      
+      // Copy to clipboard
+      navigator.clipboard.writeText(fullQuote).then(() => {
+        showToast('Quote copied to clipboard!');
+      }).catch(err => {
+        console.error('Failed to copy quote: ', err);
+        showToast('Failed to copy quote');
+      });
+    }
+    
+    // Toast notification function
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      const toastMessage = document.getElementById('toastMessage');
+      
+      toastMessage.textContent = message;
+      toast.style.display = 'flex';
+      
+      // Auto hide after 3 seconds
+      setTimeout(() => {
+        toast.classList.add('show');
+        setTimeout(() => {
+          toast.style.display = 'none';
+          toast.classList.remove('show');
+        }, 300);
+      }, 3000);
+    }
+    
+    // Start loading when page loads
+    window.addEventListener('load', () => {
+      simulateLoading();
+    });
+    
+    const quotes = {
+      sad: [
+        "Tears are words the heart can't express. – Unknown",
+        "Sometimes, you will never know the value of a moment until it becomes a memory. – Dr. Seuss",
+        "The pain of parting is nothing to the joy of meeting again. – Charles Dickens",
+        "Tears come from the heart and not from the brain. – Leonardo da Vinci",
+        "Sadness is but a wall between two gardens. – Kahlil Gibran",
+        "Heavy hearts, like heavy clouds in the sky, are best relieved by the letting of a little water. – Christopher Morley",
+        "The word 'happiness' would lose its meaning if it were not balanced by sadness. – Carl Jung",
+        "Sadness flies away on the wings of time. – Jean de La Fontaine",
+        "It's sad when someone you know becomes someone you knew. – Henry Rollins",
+        "The greater your capacity to love, the greater your capacity to feel the pain of loss. – Jennifer Aniston",
+        "Grief is the price we pay for love. – Queen Elizabeth II",
+        "Tears are the silent language of grief. – Voltaire",
+        "Sadness is a part of life, but it doesn't have to be the whole story. – Unknown",
+        "When you're feeling down, remember that the sun will rise again. – Unknown",
+        "Crying is cleansing. There's a reason for tears, happiness or sadness. – Dionne Warwick"
+      ],
+      happy: [
+        "Happiness is not something ready made. It comes from your own actions. – Chris Liphava",
+        "Count your age by friends, not years. Count your life by smiles, not tears. – John Lennon",
+        "The best way to cheer yourself is to try to cheer someone else up. – Mark Twain",
+        "Happiness is when what you think, what you say, and what you do are in harmony. – Mahatma Gandhi",
+        "The purpose of life is a life of purpose. – Robert Byrne",
+        "Happiness is not a goal; it is a by-product. – Eleanor Roosevelt",
+        "The happiest people don't have the best of everything, they make the best of everything. – Unknown",
+        "Joy is the simplest form of gratitude. – Karl Barth",
+        "Happiness is a choice. You can choose to be happy. – Valerie Bertinelli",
+        "Smile, it's free therapy. – Douglas Horton",
+        "The greatest happiness you can have is knowing that you do not necessarily require happiness. – William Saroyan",
+        "Happiness is not something you postpone for the future; it is something you design for the present. – Jim Rohn",
+        "Be happy for this moment. This moment is your life. – Omar Khayyam",
+        "Happiness is a warm puppy. – Charles M. Schulz",
+        "The only joy in the world is to begin. – Cesare Pavese"
+      ],
+      overwhelmed: [
+        "You can't calm the storm, so stop trying. What you can do is calm yourself. The storm will pass. – Timber Hawkeye",
+        "Almost everything will work again if you unplug it for a few minutes… including you. – Anne Lamott",
+        "You don't have to see the whole staircase, just take the first step. – Martin Luther King Jr.",
+        "One step at a time. You don't have to know the whole journey. – Peter Chuma",
+        "Breathe. It's just a bad day, not a bad life. – Haswell Hope",
+        "When you feel overwhelmed, remember that you are capable of more than you know. – Unknown",
+        "Take it one day at a time. – Gumbwa Bouy",
+        "Rest when you're weary. Refresh and renew yourself. – Unknown",
+        "The journey of a thousand miles begins with one step. – Lao Tzu",
+        "You are stronger than you think. – Unknown",
+        "This too shall pass. – Persian Proverb",
+        "Progress, not perfection. – Unknown",
+        "You've survived 100% of your worst days. – Unknown",
+        "In the middle of difficulty lies opportunity. – Albert Einstein",
+        "The calm comes after the storm. – Unknown"
+      ],
+      motivational: [
+        "Do what you can, with what you have, where you are. – Theodore Roosevelt",
+        "Your limitation—it's only your imagination. -Emmanuel Chinamwiri.",
+        "The only way to do great work is to love what you do. – Steve Jobs",
+        "Believe you can and you're halfway there. – Theodore Roosevelt",
+        "Success is not final, failure is not fatal: it is the courage to continue that counts. – Winston Churchill",
+        "The future belongs to those who believe in the beauty of their dreams. – Eleanor Roosevelt",
+        "It does not matter how slowly you go as long as you do not stop. – Confucius",
+        "Everything you've ever wanted is on the other side of fear. – George Addair",
+        "Believe in yourself. You are braver than you think, more talented than you know, and capable of more than you imagine. – Roy T. Bennett",
+        "Don't watch the clock; do what it does. Keep going. – Sam Levenson",
+        "The harder you work for something, the greater you'll feel when you achieve it. – Unknown",
+        "Dream bigger. Do bigger. – Unknown",
+        "Success doesn't just find you. You have to go out and get it. – Unknown",
+        "The harder you work, the luckier you get. – Gary Player",
+        "Don't be pushed around by the fears in your mind. Be led by the dreams in your heart. – Roy T. Bennett"
+      ],
+      birthday: [
+        "Count your life by smiles, not tears. Count your age by friends, not years. – John Lennon",
+        "And in the end, it's not the years in your life that count. It's the life in your years. – Abraham Lincoln",
+        "Today you are you! That is truer than true! There is no one alive who is you-er than you! – Dr. Seuss",
+        "A birthday is just another day where you go to work and people give you love. Age is just a state of mind, and you are as old as you think you are. – Abhishek Bachchan",
+        "The more you praise and celebrate your life, the more there is in life to celebrate. – Oprah Winfrey",
+        "Birthdays are nature's way of telling us to eat more cake. – Unknown",
+        "Today is the oldest you've been, and the youngest you'll ever be again. – Eleanor Roosevelt",
+        "A birthday is the beginning of a new chapter in your life. Make it the best chapter ever. – Unknown",
+        "You are never too old to set another goal or to dream a new dream. – C.S. Lewis",
+        "Growing old is mandatory, but growing up is optional. – Walt Disney",
+        "Age is merely the number of years the world has been enjoying you. – Unknown",
+        "Your birthday is a special time to celebrate the gift of 'you' to the world. – Unknown",
+        "May your birthday be filled with sunshine, smiles, laughter, love, and cheer. – Unknown",
+        "Another year older, another year wiser, and another year more amazing. – Unknown",
+        "Birthdays are a new start, a fresh beginning, and a time to pursue new endeavors. – Unknown"
+      ],
+      inspirational: [
+        "The only impossible journey is the one you never begin. – Tony Robbins",
+        "In the middle of difficulty lies opportunity. – Albert Einstein",
+        "What lies behind us and what lies before us are tiny matters compared to what lies within us. – Ralph Waldo Emerson",
+        "The best time to plant a tree was 20 years ago. The second best time is now. – Chinese Proverb",
+        "Your time is limited, don't waste it living someone else's life. – Steve Jobs",
+        "The only way to do great work is to love what you do. – Steve Jobs",
+        "If you can dream it, you can achieve it. – Zig Ziglar",
+        "Success is not how high you have climbed, but how you make a positive difference to the world. – Roy T. Bennett",
+        "Don't raise your voice, improve your argument. – Unknown",
+        "What you get by achieving your goals is not as important as what you become by achieving your goals. – Zig Ziglar",
+        "You miss 100% of the shots you don't take. – Wayne Gretzky",
+        "Whether you think you can or you think you can't, you're right. – Henry Ford",
+        "I have not failed. I've just found 10,000 ways that won't work. – Thomas A. Edison",
+        "A person who never made a mistake never tried anything new. – Albert Einstein",
+        "The future belongs to those who believe in the beauty of their dreams. – Eleanor Roosevelt"
+      ],
+      grateful: [
+        "Gratitude turns what we have into enough. – Unknown",
+        "Gratitude is the healthiest of all human emotions. The more you express gratitude, the more you will have to be grateful for. – Zig Ziglar",
+        "When we focus on our gratitude, the tide of disappointment goes out and the tide of love rushes in. – Kristin Armstrong",
+        "Gratitude makes sense of our past, brings peace for today, and creates a vision for tomorrow. – Melody Beattie",
+        "Acknowledging the good that you already have in your life is the foundation for all abundance. – Eckhart Tolle",
+        "The more grateful I am, the more beauty I see. – Mary Davis",
+        "Gratitude is the wine of the soul. – Rumi",
+        "Let us be grateful to people who make us happy; they are the charming gardeners who make our souls blossom. – Marcel Proust",
+        "Gratitude is not only the greatest of virtues, but the parent of all others. – Cicero",
+        "Enjoy the little things, for one day you may look back and realize they were the big things. – Robert Brault",
+        "Gratitude is the memory of the heart. – Jean Baptiste Massieu",
+        "The roots of all goodness lie in the soil of appreciation for goodness. – Dale Carnegie",
+        "Gratitude is the fairest blossom which springs from the soul. – Henry Ward Beecher",
+        "We must find time to stop and thank the people who make a difference in our lives. – John F. Kennedy",
+        "Gratitude is the antidote to negative emotions, a neutralizer of envy, hostility, and resentment. – Michael Josephson"
+      ],
+      peaceful: [
+        "Peace begins with a smile. – Mother Teresa",
+        "Peace comes from within. Do not seek it without. – Buddha",
+        "The mind is like water. When it's agitated, it becomes difficult to see. When it's calm, everything becomes clear. – Prasad Mahes",
+        "In peace, I can find my center. In chaos, I can find my strength. – Unknown",
+        "Peace is not the absence of conflict, but the ability to handle conflict by peaceful means. – Ronald Reagan",
+        "The pursuit of peace and progress cannot end so long as poverty or injustice exists. – Haile Selassie",
+        "Peace is always beautiful. – Walt Whitman",
+        "If you want to make peace with your enemy, you have to work with your enemy. Then he becomes your partner. – Nelson Mandela",
+        "Peace is a daily, a weekly, a monthly process, gradually changing opinions, slowly eroding old barriers, quietly building new structures. – John F. Kennedy",
+        "Inner peace begins the moment you choose not to allow another person or event to control your emotions. – Pema Chödrön",
+        "The most valuable possession you can own is an open heart. The most powerful weapon you can be is an instrument of peace. – Carlos Santana",
+        "Peace is not absence of conflict, it is the ability to handle conflict by peaceful means. – Ronald Reagan",
+        "When you make peace with yourself, you make peace with the world. – Unknown",
+        "Peace is the result of retraining your mind to process life as it is, rather than as you think it should be. – Wayne Dyer",
+        "The practice of peace and reconciliation is one of the most vital and creative of all human activities and is the bedrock of our future survival. – Thich Nhat Hanh",
+        "Keep your face always toward the sunshine—and shadows will fall behind you. – Walt Whitman"
+      ]
+    };
+
+    const colors = {
+      sad:['#e0e7ff','#93c5fd','#bfdbfe','#60a5fa','#3b82f6'],
+      happy:['#fef3c7','#fbbf24','#fde68a','#fcd34d','#f59e0b'],
+      overwhelmed:['#ddd6fe','#818cf8','#6366f1','#4f46e5','#9333ea'],
+      motivational:['#d1fae5','#a78bfa','#e9d5ff','#a78bfa','#818cf8'],
+      birthday:['#fde68a','#fcd34d','#fbbf24','#f59e0b','#d97706'],
+      inspirational:['#e9d5ff','#a78bfa','#c084fc','#60a5fa','#93c5fd'],
+      grateful:['#bbf7d0','#86efac','#22c55e','#16a34a','#0891b2'],
+      peaceful:['#bfdbfe','#60a5fa','#38bdf8','#0ea5e9','#3b82f6']
+    };
+
+    const categories = ['sad','happy','overwhelmed','motivational','birthday','inspirational','grateful','peaceful'];
+    const cards = document.getElementById('cards');
+    const quoteText = document.getElementById('quoteText');
+    const quoteAuthor = document.getElementById('quoteAuthor');
+
+    let active = 'motivational';
+
+    function pickRandom(arr){ return arr[Math.floor(Math.random()*arr.length)]; }
+
+    /* left-side category pills removed; category selection is handled via right-side controls */
+
+    function buildCards(){
+      cards.innerHTML = '';
+      categories.forEach(c=>{
+        const card = document.createElement('div');
+        card.className = 'card cat-' + c;
+        card.onclick = () => openShowroomModal(c);
+        
+        // Category icons
+        const categoryIcons = {
+          sad: '😢',
+          happy: '😊', 
+          overwhelmed: '😵',
+          motivational: '🚀',
+          birthday: '🎂',
+          inspirational: '✨',
+          grateful: '🙏',
+          peaceful: '🕊️'
+        };
+        
+        card.innerHTML = `
+          <div class="card-header">
+            <div style="display:flex;align-items:center;">
+              <div class="card-category-icon">${categoryIcons[c] || '💭'}</div>
+              <div>
+                <h3>${c.charAt(0).toUpperCase()+c.slice(1)}</h3>
+                <div class="card-quote-count">${quotes[c].length} quotes</div>
+              </div>
+            </div>
+          </div>
+          <div style="flex:1;display:flex;align-items:center">
+            <p id="${c}-p" data-cat="${c}" class="card-quote">${pickRandom(quotes[c])}</p>
+          </div>
+          <div class="card-footer">
+            <button class="card-action-btn" onclick="event.stopPropagation(); showDaily('${c}')">
+              <i class="fas fa-random"></i> Random Quote
+            </button>
+            <button class="card-action-btn" onclick="event.stopPropagation(); openShowroomModal('${c}')">
+              <i class="fas fa-eye"></i> View All
+            </button>
+          </div>
+        `;
+        cards.appendChild(card);
+      });
+    }
+
+    function showDaily(cat){
+      const q = pickRandom(quotes[cat]);
+      const parts = q.split('–');
+      quoteText.textContent = parts[0].trim();
+      quoteAuthor.textContent = parts[1]? '— ' + parts[1].trim(): '';
+      // subtle color
+      quoteText.style.color = pickRandom(colors[cat]);
+      // track current
+      window.currentQuote = q;
+      window.currentCat = cat;
+      updateFavBtn();
+      return q;
+    }
+
+    // interactions: clicking a card quote shows it on main and records it
+    const viewed = [];
+    function addViewed(cat, quote){
+      const key = quote;
+      const idx = viewed.findIndex(v => v.quote === key);
+      if(idx !== -1) viewed.splice(idx,1);
+      viewed.unshift({cat,quote});
+      if(viewed.length>8) viewed.pop();
+      renderViewed();
+    }
+
+    function renderViewed(){
+      const list = document.getElementById('viewedList');
+      if(!list) return;
+      list.innerHTML = viewed.map((v,i)=>{
+        const parts = v.quote.split('–');
+        const text = parts[0].trim();
+        const author = parts[1]? parts[1].trim(): '';
+        return `<button class="card-quote small" data-idx="${i}" style="text-align:left;padding:8px;border-radius:8px;background:rgba(255,255,255,0.02);border:0;color:var(--muted);">${text}${author? ' — ' + author : ''}</button>`;
+      }).join('');
+      list.querySelectorAll('button.card-quote.small').forEach(btn=>{
+        btn.addEventListener('click', ()=>{
+          const v = viewed[Number(btn.dataset.idx)];
+          if(v) showDailyFromQuote(v.cat, v.quote);
+        });
+      });
+    }
+
+    function showDailyFromQuote(cat, quote){
+      const parts = quote.split('–');
+      quoteText.textContent = parts[0].trim();
+      quoteAuthor.textContent = parts[1]? '— ' + parts[1].trim(): '';
+      quoteText.style.color = pickRandom(colors[cat]);
+      window.currentQuote = quote;
+      window.currentCat = cat;
+      updateFavBtn();
+    }
+
+    // persistent state
+    const favorites = [];
+    function saveState(){
+      try{ localStorage.setItem('mv_state', JSON.stringify({viewed, favorites})); }catch(e){}
+    }
+    function loadState(){
+      try{
+        const s = localStorage.getItem('mv_state');
+        if(!s) return;
+        const obj = JSON.parse(s);
+        if(Array.isArray(obj.viewed)){
+          viewed.splice(0, viewed.length, ...obj.viewed);
+        }
+        if(Array.isArray(obj.favorites)){
+          favorites.splice(0, favorites.length, ...obj.favorites);
+        }
+      }catch(e){}
+      renderViewed(); renderFavorites();
+    }
+
+    function renderFavorites(){
+      const el = document.getElementById('favList'); if(!el) return;
+      el.innerHTML = favorites.map((v,i)=>{
+        const parts = v.quote.split('–');
+        const text = parts[0].trim();
+        const author = parts[1]? parts[1].trim(): '';
+        return `<button class="card-quote small" data-idx="${i}" style="text-align:left;padding:8px;border-radius:8px;background:rgba(255,255,255,0.02);border:0;color:var(--muted);">${text}${author? ' — ' + author : ''}</button>`;
+      }).join('');
+      el.querySelectorAll('button.card-quote.small').forEach(btn=>{
+        btn.addEventListener('click', ()=>{
+          const v = favorites[Number(btn.dataset.idx)];
+          if(v) showDailyFromQuote(v.cat, v.quote);
+        });
+      });
+    }
+
+    function toggleFavorite(cat, quote){
+      const idx = favorites.findIndex(f=>f.quote===quote);
+      if(idx===-1) favorites.unshift({cat,quote}); else favorites.splice(idx,1);
+      if(favorites.length>40) favorites.pop();
+      renderFavorites(); saveState();
+      // push changes to cloud if user is authenticated
+      if(window.firebaseUser) saveFavoritesToCloud();
+      updateFavBtn(); showToast(idx===-1? 'Saved to favorites' : 'Removed from favorites');
+    }
+
+    function updateFavBtn(){
+      const btn = document.getElementById('favBtn'); if(!btn) return;
+      const q = window.currentQuote;
+      if(!q){ btn.textContent = '☆ Save'; btn.classList.remove('fav-active'); return; }
+      const exists = favorites.find(f=>f.quote===q);
+      if(exists){ btn.textContent = '★ Saved'; btn.classList.add('fav-active'); } else { btn.textContent = '☆ Save'; btn.classList.remove('fav-active'); }
+    }
+
+    function showToast(msg){
+      const t = document.createElement('div'); t.className='toast'; t.textContent = msg; document.body.appendChild(t);
+      setTimeout(()=> t.style.opacity='0.0',1600); setTimeout(()=> t.remove(),2000);
+    }
+
+    function attachInteractions(){
+      // show all toggles
+      document.querySelectorAll('.show-all').forEach(btn=>{
+        btn.addEventListener('click', ()=>{
+          const cat = btn.dataset.cat;
+          const list = document.getElementById(cat + '-list');
+          const isOpen = list.getAttribute('aria-hidden') === 'false';
+          if(isOpen){
+            list.style.maxHeight = '0'; list.style.opacity='0'; list.setAttribute('aria-hidden','true'); btn.textContent = `See all`;
+          } else {
+            list.style.maxHeight = Math.min(list.scrollHeight,600) + 'px'; list.style.opacity='1'; list.setAttribute('aria-hidden','false'); btn.textContent = `Hide`;
+          }
+        });
+      });
+
+      // clicking a card quote shows it and records it
+      document.querySelectorAll('.card-quote').forEach(p=>{
+        p.style.cursor = 'pointer';
+        p.addEventListener('click', ()=>{
+          const cat = p.dataset.cat;
+          const quote = p.textContent;
+          showDailyFromQuote(cat, quote);
+          addViewed(cat, quote);
+        });
+      });
+
+      // aside mood buttons
+      document.querySelectorAll('aside .spin').forEach(b=>{
+        b.addEventListener('click', ()=>{
+          const cat = b.dataset.cat;
+          const q = showDaily(cat);
+          addViewed(cat, q);
+        });
+      });
+
+      // copy & favorite buttons
+      const copyBtn = document.getElementById('copyBtn');
+      const favBtn = document.getElementById('favBtn');
+      if(copyBtn){ copyBtn.addEventListener('click', ()=>{
+        const q = window.currentQuote || '';
+        const text = q;
+        if(navigator.clipboard){ navigator.clipboard.writeText(text).then(()=> showToast('Copied to clipboard')); } else { showToast('Copy not supported'); }
+      }); }
+      if(favBtn){ favBtn.addEventListener('click', ()=>{
+        if(!window.currentQuote || !window.currentCat) { showToast('No quote selected'); return; }
+        toggleFavorite(window.currentCat, window.currentQuote);
+      }); }
+
+      // clear viewed
+      const clearViewed = document.getElementById('clearViewed');
+      if(clearViewed) clearViewed.addEventListener('click', ()=>{ viewed.splice(0,viewed.length); renderViewed(); saveState(); showToast('Cleared recently viewed'); });
+
+      // show favorites quick: scroll into view
+      const showFavs = document.getElementById('showFavs');
+      if(showFavs) showFavs.addEventListener('click', ()=>{ const el = document.getElementById('favList'); if(el){ el.scrollIntoView({behavior:'smooth'}); showToast('Favorites'); } });
+
+      // keyboard shortcuts: n=new, f=favorite, c=copy
+      document.addEventListener('keydown', (e)=>{
+        if(e.key === 'n'){
+          const q = showDaily(window.currentCat || active);
+          addViewed(window.currentCat || active, q);
+        }
+        if(e.key === 'f'){
+          if(window.currentQuote) toggleFavorite(window.currentCat, window.currentQuote);
+        }
+        if(e.key === 'c'){
+          if(window.currentQuote){ if(navigator.clipboard) navigator.clipboard.writeText(window.currentQuote).then(()=> showToast('Copied to clipboard')); }
+        }
+      });
+    }
+
+    // init
+    buildCards(); attachInteractions(); loadState(); showDaily(active); initQuoteOfTheDay(); initSearch(); initRandomQuote(); initQuoteHistory(); initSocialSharing(); initMoodButtons();
+
+    </script>
+</body>
+</html>
